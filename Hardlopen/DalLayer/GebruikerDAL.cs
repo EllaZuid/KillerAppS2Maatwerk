@@ -41,7 +41,7 @@ namespace DAL
             return GebruikerId;
         }
 
-        public void GebruikerRegistreren(string naam, string wachtwoord, string email, string geslacht, decimal gewicht, double lengte)
+        public void GebruikerRegistreren(string naam, string wachtwoord, string email, string geslacht, double gewicht, double lengte)
         {
             Open();
             string query = "INSERT INTO dbo.[Gebruiker] (naam, wachtwoord, email, geslacht, gewicht, lengte) VALUES (@Naam, @Wachtwoord, @Email, @Geslacht, @Gewicht, @Lengte)";
@@ -51,7 +51,7 @@ namespace DAL
             commandRegistreren.Parameters.Add("@Email", SqlDbType.NChar).Value = email;
             commandRegistreren.Parameters.Add("@geslacht", SqlDbType.NChar).Value = geslacht;
             commandRegistreren.Parameters.Add("@Lengte", SqlDbType.Float).Value = lengte;
-            commandRegistreren.Parameters.Add("@Gewicht", SqlDbType.Decimal).Value = gewicht;
+            commandRegistreren.Parameters.Add("@Gewicht", SqlDbType.Float).Value = gewicht;
             commandRegistreren.ExecuteNonQuery();
             Close();
         }

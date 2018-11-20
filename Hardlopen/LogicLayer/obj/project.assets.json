@@ -4024,11 +4024,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\Hardlopen\\LogicLayer\\Logic.csproj",
+      "projectUniqueName": "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\KillerAppS2Maatwerk\\Hardlopen\\LogicLayer\\Logic.csproj",
       "projectName": "Logic",
-      "projectPath": "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\Hardlopen\\LogicLayer\\Logic.csproj",
+      "projectPath": "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\KillerAppS2Maatwerk\\Hardlopen\\LogicLayer\\Logic.csproj",
       "packagesPath": "C:\\Users\\Ella\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\Hardlopen\\LogicLayer\\obj\\",
+      "outputPath": "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\KillerAppS2Maatwerk\\Hardlopen\\LogicLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4047,11 +4047,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\Hardlopen\\DalLayer\\DAL.csproj": {
-              "projectPath": "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\Hardlopen\\DalLayer\\DAL.csproj"
+            "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\KillerAppS2Maatwerk\\Hardlopen\\DalLayer\\DAL.csproj": {
+              "projectPath": "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\KillerAppS2Maatwerk\\Hardlopen\\DalLayer\\DAL.csproj"
             },
-            "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\Hardlopen\\ModelLayer\\Model.csproj": {
-              "projectPath": "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\Hardlopen\\ModelLayer\\Model.csproj"
+            "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\KillerAppS2Maatwerk\\Hardlopen\\ModelLayer\\Model.csproj": {
+              "projectPath": "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\KillerAppS2Maatwerk\\Hardlopen\\ModelLayer\\Model.csproj"
             }
           }
         }

@@ -8,7 +8,7 @@ namespace Model
         public string Naam { get; set; }
         public string Wachtwoord { get; set; }
         public string Email { get; set; }
-        public decimal Gewicht { get; set; }
+        public double Gewicht { get; set; }
         public double Lengte { get; set; }
         public string Geslacht { get; set; }
         //public DateTime Tijd { get; private set; }
@@ -29,7 +29,7 @@ namespace Model
             Wachtwoord = wachtwoord;
         }
 
-        public Gebruiker(string naam, string wachtwoord, string email, string geslacht, decimal gewicht, double lengte)
+        public Gebruiker(string naam, string wachtwoord, string email, string geslacht, double gewicht, double lengte)
         {
             Naam = naam;
             Wachtwoord = wachtwoord;

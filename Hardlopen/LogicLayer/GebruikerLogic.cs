@@ -34,13 +34,12 @@ namespace Logic
             return null;
         }
 
-        public int? Registreren(string naamInvoer, string wachtwoordInvoer, string wachtwoord2Invoer, string emailInvoer, decimal gewichtInvoer, double lengteInvoer, string geslachtInvoer)
+        public int? Registreren(string naamInvoer, string wachtwoordInvoer, string wachtwoord2Invoer, string emailInvoer, double gewichtInvoer, double lengteInvoer, string geslachtInvoer)
         {
-            decimal gewicht = Convert.ToDecimal(gewichtInvoer);
             if (wachtwoordInvoer == wachtwoord2Invoer)
             {
                 HashWachtwoord(wachtwoordInvoer);
-                _gebruikerDal.GebruikerRegistreren(naamInvoer, HashedWachtwoord, emailInvoer, geslachtInvoer, gewicht, lengteInvoer);
+                _gebruikerDal.GebruikerRegistreren(naamInvoer, HashedWachtwoord, emailInvoer, geslachtInvoer, gewichtInvoer, lengteInvoer);
                 Check = true;
                 _gebruikerDal.IdRegistratieOphalen(naamInvoer);
                 for (int i = 0; i < _gebruikerDal.IdRegistratie.Count; i++)

@@ -54,7 +54,7 @@ namespace Hardlopen.Controllers
         [HttpPost]
         public ActionResult Registreren(RegistrerenViewModel viewModel)
         {
-            decimal gewicht = Convert.ToDecimal(viewModel.Gewicht);
+            double gewicht = Convert.ToDouble(viewModel.Gewicht);
             double lengte = Convert.ToDouble(viewModel.Lengte);
             _gebruiker.Naam = viewModel.Naam;
             _gebruiker.Wachtwoord = viewModel.Wachtwoord;
