@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home: Index</title>
+</head>
+<body>
+    <h2>Overzicht</h2>
+    <div><canvas id="ComboChart"></canvas></div>
+
+    @{ ChartJSCore.Models.Chart chart = (ChartJSCore.Models.Chart)ViewData["chart"];}
+
+    <script src="../../Scripts/Chart.min.js"></script>
+    <script>
+        @Html.Raw(chart.CreateChartCode("ComboChart"));
+    </script>
+</body>
+</html>
+

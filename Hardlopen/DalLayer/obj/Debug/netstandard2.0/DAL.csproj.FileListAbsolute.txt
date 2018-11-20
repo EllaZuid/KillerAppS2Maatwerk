@@ -1,0 +1,12 @@
+C:\Users\Ella\source\repos\Maatwerk-S2\Hardlopen\DalLayer\bin\Debug\netstandard2.0\DAL.deps.json
+C:\Users\Ella\source\repos\Maatwerk-S2\Hardlopen\DalLayer\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\Ella\source\repos\Maatwerk-S2\Hardlopen\DalLayer\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\Ella\source\repos\Maatwerk-S2\Hardlopen\DalLayer\bin\Debug\netstandard2.0\Model.dll
+C:\Users\Ella\source\repos\Maatwerk-S2\Hardlopen\DalLayer\bin\Debug\netstandard2.0\Model.pdb
+C:\Users\Ella\source\repos\Maatwerk-S2\Hardlopen\DalLayer\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+C:\Users\Ella\source\repos\Maatwerk-S2\Hardlopen\DalLayer\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Ella\source\repos\Maatwerk-S2\Hardlopen\DalLayer\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+C:\Users\Ella\source\repos\Maatwerk-S2\Hardlopen\DalLayer\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+C:\Users\Ella\source\repos\Maatwerk-S2\Hardlopen\DalLayer\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+C:\Users\Ella\source\repos\Maatwerk-S2\Hardlopen\DalLayer\obj\Debug\netstandard2.0\DAL.dll
+C:\Users\Ella\source\repos\Maatwerk-S2\Hardlopen\DalLayer\obj\Debug\netstandard2.0\DAL.pdb

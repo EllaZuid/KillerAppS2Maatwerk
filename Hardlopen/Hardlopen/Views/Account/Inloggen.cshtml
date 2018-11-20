@@ -1,0 +1,28 @@
+﻿@model Hardlopen.viewModels.InloggenViewModel
+@{
+    ViewBag.Title = "Inloggen";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account: Inloggen</title>
+</head>
+<body>
+    @using (Html.BeginForm("Inloggen", "Account", FormMethod.Post))
+    {
+        <h2>Inloggen</h2>
+        <p>
+            Gebruikersnaam:<br />
+            @Html.TextBoxFor(vmgebruiker => vmgebruiker.GebruikersNaam, "Wachtwoord")
+        </p>
+        <p>
+            Wachtwoord:<br />
+            @Html.PasswordFor(vmgebruiker => vmgebruiker.Wachtwoord, "Wachtwoord")
+        </p>
+        <div>
+            <input type="submit" value="Log in" id="NextBtn" />
+        </div>
+    }
+</body>
+</html> 

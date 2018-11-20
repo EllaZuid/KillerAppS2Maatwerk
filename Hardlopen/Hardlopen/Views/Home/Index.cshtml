@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home: Index</title>
+</head>
+<body>
+    <h2>Index</h2>
+    @if (!((int?)Session["idIngeloggd"]).HasValue)
+    {
+    <div>
+        <a href="@Url.Action("Inloggen", "Account")">
+            <button type="button" , ;>Inloggen</button>
+        </a>
+        <a href="@Url.Action("Registreren", "Account")">
+            <button type="button" ;>Registreren</button>
+        </a>
+    </div><br />
+    }
+    else
+    {
+        <div>
+            <a href="@Url.Action("GegevensInvullen", "Loopmoment")">
+                <button type="button" ;>Gegevens invullen</button>
+            </a>
+            <a href="@Url.Action("Overzicht", "Loopmoment")">
+                <button type="button" ;>Overzicht</button>
+            </a>
+            <a href="@Url.Action("Uitloggen", "Account")">
+                <button type="button" ;>Uitloggen</button>
+            </a>
+        </div>
+    }
+</body>
+</html>
+

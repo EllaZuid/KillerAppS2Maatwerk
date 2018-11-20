@@ -1,0 +1,48 @@
+﻿@model Hardlopen.viewModels.RegistrerenViewModel
+@{
+    ViewBag.Title = "Registreren";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account: Inloggen</title>
+</head>
+<body>
+    @using (Html.BeginForm("Registreren", "Account", FormMethod.Post))
+    {
+        <h2>Registreren</h2>
+        <p>
+            Gebruikersnaam:<br />
+            @Html.TextBoxFor(vmInloggen => vmInloggen.Naam, "Gebruikersnaam")
+        </p>
+        <p>
+            E-mailadres:<br />
+            <input type="email" name="email">
+        </p>
+        <p>
+            Gewicht:<br />
+            @Html.TextBoxFor(vmInloggen => vmInloggen.Gewicht, "Gewicht")
+        </p>
+        <p>
+            Lengte:<br />
+            @Html.TextBoxFor(vmInloggen => vmInloggen.Lengte, "Lengte")
+        </p>
+        <p>
+            Geslacht:<br />
+            @Html.TextBoxFor(vmInloggen => vmInloggen.Geslacht, "Geslacht")
+        </p>
+        <p>
+            Wachtwoord:<br />
+            @Html.PasswordFor(vmInloggen => vmInloggen.Wachtwoord, "Wachtwoord")
+        </p>
+        <p>
+            Herhaling wachtwoord:<br />
+            @Html.PasswordFor(vmInloggen => vmInloggen.WachtwoordHerhaling, "Wachtwoord herhaling")
+        </p>
+        <div>
+            <input type="submit" value="Registreer" id="NextBtn" />
+        </div>
+    }
+</body>
+</html> 

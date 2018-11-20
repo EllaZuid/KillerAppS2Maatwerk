@@ -1,0 +1,25 @@
+﻿@model Hardlopen.viewModels.InvullenViewModel
+@{
+    ViewBag.Title = "GegevensInvullen";
+}
+
+@using (Html.BeginForm("GegevensInvullen", "Loopmoment", FormMethod.Post))
+{
+    <h2>Registreren</h2>
+    <p>
+        Tijd:(min)<br />
+        @Html.TextBoxFor(vmInvullen => vmInvullen.Tijd, "Tijd")
+    </p>
+    <p>
+        Datum:<br />
+        <input type="date" name="Datum">
+    </p>
+    <p>
+        Afstand: (km)<br />
+        @Html.TextBoxFor(vmInloggen => vmInloggen.Afstand, "Afstand")
+    </p>
+    <div>
+        <input type="submit" value="Verstuur" id="NextBtn" />
+    </div>
+}
+
