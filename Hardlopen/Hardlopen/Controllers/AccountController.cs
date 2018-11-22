@@ -8,7 +8,6 @@ namespace Hardlopen.Controllers
 {
     public class AccountController : Controller
     {
-        Gebruiker _gebruiker = new Gebruiker();
         private GebruikerLogic _gebruikerLogic = new GebruikerLogic();
 
         // GET: Account
@@ -28,14 +27,12 @@ namespace Hardlopen.Controllers
         [HttpPost]
         public ActionResult Inloggen(InloggenViewModel viewModel)
         {
-            _gebruiker.Naam = viewModel.GebruikersNaam;
-            _gebruiker.Wachtwoord = viewModel.Wachtwoord;
-            Session["idIngeloggd"] = _gebruikerLogic.Inloggen(_gebruiker.Naam, _gebruiker.Wachtwoord);
-            if (_gebruikerLogic.Check)
+            Gebruiker gebruiker = new Gebruiker(viewModel.GebruikersNaam, viewModel.Wachtwoord);
+            Session["idIngeloggd"] = _gebruikerLogic.Inloggen(gebruiker);
+            if ((int)Session["idIngeloggd"] > 0)
             {
                 return RedirectToAction("Index", "Home");
             }
-
             return View();
         }
 
@@ -56,18 +53,12 @@ namespace Hardlopen.Controllers
         {
             double gewicht = Convert.ToDouble(viewModel.Gewicht);
             double lengte = Convert.ToDouble(viewModel.Lengte);
-            _gebruiker.Naam = viewModel.Naam;
-            _gebruiker.Wachtwoord = viewModel.Wachtwoord;
-            _gebruiker.Email = viewModel.Email;
-            _gebruiker.Gewicht = gewicht;
-            _gebruiker.Lengte = lengte;
-            _gebruiker.Geslacht = viewModel.Geslacht;
-            Session["idIngeloggd"] = _gebruikerLogic.Registreren(_gebruiker.Naam, _gebruiker.Wachtwoord, viewModel.WachtwoordHerhaling, _gebruiker.Email, gewicht, lengte, _gebruiker.Geslacht);
-            if (_gebruikerLogic.Check)
+            Gebruiker gebruiker = new Gebruiker(viewModel.Naam, viewModel.Wachtwoord, viewModel.Email, viewModel.Geslacht, gewicht, lengte);
+            Session["idIngeloggd"] = _gebruikerLogic.Registreren(gebruiker, viewModel.WachtwoordHerhaling);
+            if ((int)Session["idIngeloggd"] > 0)
             {
                 return RedirectToAction("Index", "Home");
             }
-
             return View();
         }
 

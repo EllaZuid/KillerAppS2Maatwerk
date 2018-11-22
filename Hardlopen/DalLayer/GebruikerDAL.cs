@@ -14,7 +14,7 @@ namespace DAL
         public List<Gebruiker> GebruikerId = new List<Gebruiker>();
         public List<Gebruiker> IdRegistratie = new List<Gebruiker>();
 
-        public void Open()
+        private void Open()
         {
             _conn.Open(); 
             Console.WriteLine("Verbonden met " + Connectionstring + ".");
@@ -75,7 +75,7 @@ namespace DAL
             return IdRegistratie;
         }
 
-        public void Close()
+        private void Close()
         {
             _conn.Close();
             Console.WriteLine("Verbinding verbroken.");
