@@ -3981,11 +3981,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\Hardlopen\\ModelLayer\\Model.csproj",
+      "projectUniqueName": "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\KillerAppS2Maatwerk\\Hardlopen\\ModelLayer\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\Hardlopen\\ModelLayer\\Model.csproj",
+      "projectPath": "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\KillerAppS2Maatwerk\\Hardlopen\\ModelLayer\\Model.csproj",
       "packagesPath": "C:\\Users\\Ella\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\Hardlopen\\ModelLayer\\obj\\",
+      "outputPath": "C:\\Users\\Ella\\source\\repos\\Maatwerk-S2\\KillerAppS2Maatwerk\\Hardlopen\\ModelLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

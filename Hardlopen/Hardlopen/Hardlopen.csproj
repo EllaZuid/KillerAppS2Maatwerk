@@ -307,7 +307,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LoopmomentController.cs" />
+    <Compile Include="Controllers\ActiviteitController.cs" />
     <Compile Include="Controllers\PlaylistController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -330,10 +330,10 @@
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Account\Inloggen.cshtml" />
     <Content Include="Views\Account\Registreren.cshtml" />
-    <Content Include="Views\Loopmoment\Index.cshtml" />
-    <Content Include="Views\Loopmoment\GegevensInvullen.cshtml" />
-    <Content Include="Views\Loopmoment\Overzicht.cshtml" />
-    <Content Include="Views\Loopmoment\Vergelijken.cshtml" />
+    <Content Include="Views\Activiteit\Index.cshtml" />
+    <Content Include="Views\Activiteit\GegevensInvullen.cshtml" />
+    <Content Include="Views\Activiteit\Overzicht.cshtml" />
+    <Content Include="Views\Activiteit\Vergelijken.cshtml" />
     <Content Include="Views\Playlist\Index.cshtml" />
     <Content Include="Views\Playlist\MuziekLuisteren.cshtml" />
     <Content Include="Views\Playlist\LiedjesToevoegen.cshtml" />

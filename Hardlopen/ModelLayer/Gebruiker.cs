@@ -4,15 +4,15 @@ namespace Model
 {
     public class Gebruiker
     {
-        public int Id { get; set; }
-        public string Naam { get; set; }
-        public string Wachtwoord { get; set; }
-        public string Email { get; set; }
-        public decimal Gewicht { get; set; }
-        public double Lengte { get; set; }
-        public string Geslacht { get; set; }
+        public int Id { get; private set; }
+        public string Naam { get; private set; }
+        public string Wachtwoord { get; private set; }
+        public string Email { get; private set; }
+        public double Gewicht { get; private set; }
+        public double Lengte { get; private set; }
+        public string Geslacht { get; private set; }
         //public DateTime Tijd { get; private set; }
-        //public Loopmoment Loopmoment { get; private set; }
+        //public Loopmoment Loopmoment { get; private set; }    
         //public Playlist Playlist { get; private set; }
 
         public Gebruiker() { }
@@ -22,6 +22,12 @@ namespace Model
             Id = id;
             Naam = naam;
         }
+
+        public Gebruiker(string naam, string wachtwoord)
+        {
+            Naam = naam;
+            Wachtwoord = wachtwoord;
+        }
         public Gebruiker(int id, string naam, string wachtwoord)
         {
             Id = id;
@@ -29,7 +35,7 @@ namespace Model
             Wachtwoord = wachtwoord;
         }
 
-        public Gebruiker(string naam, string wachtwoord, string email, string geslacht, decimal gewicht, double lengte)
+        public Gebruiker(string naam, string wachtwoord, string email, string geslacht, double gewicht, double lengte)
         {
             Naam = naam;
             Wachtwoord = wachtwoord;

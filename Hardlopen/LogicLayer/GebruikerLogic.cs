@@ -1,32 +1,30 @@
 ﻿using System;
 using System.Security.Cryptography;
 using DAL;
+using Model;
 
 namespace Logic
 {
     public class GebruikerLogic
     {
         private readonly GebruikerDal _gebruikerDal = new GebruikerDal();
-        public bool Check;
         public string HashedWachtwoord;
 
-        public int? Inloggen(string naamInvoer, string wachtwoordInvoer)
+        public int? Inloggen(Gebruiker gebruiker)
         {
             _gebruikerDal.OphalenGebruikersInfo();
             for (int i = 0; i < _gebruikerDal.GebruikerId.Count; i++)
             {
                 string naam = _gebruikerDal.GebruikerId[i].Naam.Replace(" ", "");
-                if (naam == naamInvoer)
+                if (naam == gebruiker.Naam)
                 {
                     string wachtwoord = _gebruikerDal.GebruikerId[i].Wachtwoord.Replace(" ", "");
-                    if (VergelijkWachtwoorden(wachtwoordInvoer, wachtwoord))
-                    {
-                        Check = true;
+                    if (VergelijkWachtwoorden(gebruiker.Wachtwoord, wachtwoord))
+                    { 
                         return _gebruikerDal.GebruikerId[i].Id;
                     }
                     else
                     {
-                        Check = false;
                         return 0;
                     }
                 }
@@ -34,18 +32,16 @@ namespace Logic
             return null;
         }
 
-        public int? Registreren(string naamInvoer, string wachtwoordInvoer, string wachtwoord2Invoer, string emailInvoer, decimal gewichtInvoer, double lengteInvoer, string geslachtInvoer)
+        public int? Registreren(Gebruiker gebruiker, string wachtwoord2Invoer)
         {
-            decimal gewicht = Convert.ToDecimal(gewichtInvoer);
-            if (wachtwoordInvoer == wachtwoord2Invoer)
+            if (gebruiker.Wachtwoord == wachtwoord2Invoer)
             {
-                HashWachtwoord(wachtwoordInvoer);
-                _gebruikerDal.GebruikerRegistreren(naamInvoer, HashedWachtwoord, emailInvoer, geslachtInvoer, gewicht, lengteInvoer);
-                Check = true;
-                _gebruikerDal.IdRegistratieOphalen(naamInvoer);
+                HashWachtwoord(gebruiker.Wachtwoord);
+                _gebruikerDal.GebruikerRegistreren(gebruiker.Naam, HashedWachtwoord, gebruiker.Email, gebruiker.Geslacht, gebruiker.Gewicht, gebruiker.Lengte);
+                _gebruikerDal.IdRegistratieOphalen(gebruiker.Naam);
                 for (int i = 0; i < _gebruikerDal.IdRegistratie.Count; i++)
                 {
-                    if (naamInvoer == _gebruikerDal.IdRegistratie[i].Naam)
+                    if (gebruiker.Naam == _gebruikerDal.IdRegistratie[i].Naam)
                     {
                         return _gebruikerDal.IdRegistratie[i].Id;
                     }
@@ -53,7 +49,6 @@ namespace Logic
             }
             else
             {
-                Check = false;
                 return null;
             }
             return null;
